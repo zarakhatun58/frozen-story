@@ -1,0 +1,67 @@
+.metrics-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.metrics-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.metrics-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.metrics-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metrics-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.metrics-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  line-height: 1;
+}
+
+.metrics-change {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.metrics-change.positive {
+  color: hsl(var(--status-completed));
+}
+
+.metrics-change.negative {
+  color: hsl(var(--status-failed));
+}
+
+.metrics-period {
+  color: hsl(var(--muted-foreground));
+  font-weight: 400;
+}

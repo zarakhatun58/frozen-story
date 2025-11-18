@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        status: {
+          running: "hsl(var(--status-running))",
+          completed: "hsl(var(--status-completed))",
+          failed: "hsl(var(--status-failed))",
+          pending: "hsl(var(--status-pending))",
+        },
+        node: {
+          bg: "hsl(var(--node-bg))",
+          border: "hsl(var(--node-border))",
+        },
+        canvas: {
+          bg: "hsl(var(--canvas-bg))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
