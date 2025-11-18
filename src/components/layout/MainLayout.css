@@ -1,0 +1,23 @@
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  background: hsl(var(--background));
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 80px;
+  }
+}

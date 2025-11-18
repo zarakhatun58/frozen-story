@@ -1,0 +1,101 @@
+.workflow-node {
+  background: hsl(var(--node-bg));
+  border: 2px solid hsl(var(--node-border));
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.workflow-node:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.workflow-node-running {
+  border-color: hsl(var(--status-running));
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.workflow-node-completed {
+  border-color: hsl(var(--status-completed));
+}
+
+.workflow-node-failed {
+  border-color: hsl(var(--status-failed));
+}
+
+.workflow-node-pending {
+  border-color: hsl(var(--node-border));
+  opacity: 0.8;
+}
+
+.node-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.node-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-icon {
+  transition: color 0.2s ease;
+}
+
+.workflow-node-running .status-icon {
+  color: hsl(var(--status-running));
+}
+
+.workflow-node-completed .status-icon {
+  color: hsl(var(--status-completed));
+}
+
+.workflow-node-failed .status-icon {
+  color: hsl(var(--status-failed));
+}
+
+.workflow-node-pending .status-icon {
+  color: hsl(var(--muted-foreground));
+}
+
+.node-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: hsl(var(--foreground));
+  white-space: nowrap;
+}
+
+.node-handle {
+  width: 10px;
+  height: 10px;
+  background: hsl(var(--primary));
+  border: 2px solid hsl(var(--background));
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
