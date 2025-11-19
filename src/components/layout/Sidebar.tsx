@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Workflow, Shield, LogOut } from 'lucide-react';
+import { LayoutDashboard, Workflow, BarChart3, Shield, LogOut } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import './Sidebar.css';
 
@@ -30,6 +30,14 @@ export const Sidebar = () => {
         >
           <Workflow size={20} />
           <span>Workflow Studio</span>
+        </NavLink>
+
+        <NavLink
+          to="/analytics"
+          className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+        >
+          <BarChart3 size={20} />
+          <span>Analytics</span>
         </NavLink>
 
         {permissions.admin && (

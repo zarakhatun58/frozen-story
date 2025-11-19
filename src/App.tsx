@@ -8,6 +8,7 @@ import { MainLayout } from "./components/layout/MainLayout";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import WorkflowStudio from "./pages/WorkflowStudio";
+import WorkflowAnalytics from "./pages/WorkflowAnalytics";
 import AdminConsole from "./pages/AdminConsole";
 import NotFound from "./pages/NotFound";
 
@@ -36,6 +37,7 @@ const App = () => (
             >
               <Route path="/" element={<Index />} />
               <Route path="/workflow" element={<WorkflowStudio />} />
+              <Route path="/analytics" element={<WorkflowAnalytics />} />
               <Route path="/admin" element={<AdminConsole />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
