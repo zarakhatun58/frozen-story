@@ -34,8 +34,33 @@
 
 .node-content {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.node-header {
+  display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.type-icon {
+  color: hsl(var(--muted-foreground));
+}
+
+.node-config {
+  display: flex;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+}
+
+.config-badge {
+  font-size: 0.625rem;
+  padding: 0.125rem 0.5rem;
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border-radius: 999px;
+  font-weight: 500;
 }
 
 .node-status {
