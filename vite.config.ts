@@ -7,6 +7,8 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+     allowedHosts: ["frozen-story.onrender.com"],
+    strictPort: true,
   },
   resolve: {
     alias: {
