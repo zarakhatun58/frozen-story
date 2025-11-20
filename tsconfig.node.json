@@ -1,23 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
+    "lib": ["ES2023"],
     "module": "ESNext",
-    "lib": ["ES2020"],
     "skipLibCheck": true,
-
     "moduleResolution": "node",
-    "strict": false,
-    "noEmit": true,
-
-    "types": ["node"],
-    "typeRoots": ["./node_modules/@types"]
+    "types": ["node", "vite"],
+    "isolatedModules": true,
+    "noEmit": true
   },
-
-  "include": ["vite.config.ts"],
-  "exclude": [
-    "src",
-    "**/*.ts",
-    "**/*.tsx",
-    "node_modules"
-  ]
+  "include": ["vite.config.ts"]
 }
